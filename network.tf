@@ -58,4 +58,4 @@ resource "aws_db_security_group" "default" {
       cidr = var.rds_sg_allowed_cidr
     }
   }
-}
+
