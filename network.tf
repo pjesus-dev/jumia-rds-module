@@ -57,7 +57,7 @@ resource "aws_db_security_group" "default" {
   dynamic "ingress"{
     for_each = var.rds_sg_allowed_cidr
     content{
-      cidr = [each.value]
+      cidr = [ingress.value]
     }
   }
 }
