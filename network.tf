@@ -54,10 +54,8 @@ resource "aws_db_subnet_group" "default" {
 resource "aws_db_security_group" "default" {
   name = "rds_${var.app_name}_sg"
 
-  dynamic "ingress"{
-    for_each = var.rds_sg_allowed_cidr
-    content{
-      cidr = [ingress.value]
+  ingress {
+      cidr = var.rds_sg_allowed_cidr
     }
   }
 }
