@@ -15,6 +15,12 @@ variable "private_subnet_cidrs" {
   }
 }
 
+variable "rds_sg_allowed_cidr" {
+  type        = list
+  description = "List of CIDR allowed on SG"
+  default = [""]
+}
+
 variable "public_subnets_ids_to_private" {
   type        = list(any)
   description = "List of public subnet IDs to attach each Nat gateway, match the values with the availability zones of the private subnet that the natgateway will be attached"
