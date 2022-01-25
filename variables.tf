@@ -16,9 +16,9 @@ variable "private_subnet_cidrs" {
 }
 
 variable "rds_sg_allowed_cidr" {
-  type        = list
+  type        = string
   description = "List of CIDR allowed on SG"
-  default = [""]
+  default = ""
 }
 
 variable "public_subnets_ids_to_private" {
