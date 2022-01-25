@@ -50,7 +50,7 @@ variable "database_name" {
   default = ""
 }
 
-variable "database_name" {
+variable "db_username" {
   type = string
   default = "postgres"
 }
